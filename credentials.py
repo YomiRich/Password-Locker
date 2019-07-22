@@ -23,7 +23,7 @@ class credentials:
         method to delete credentials from credentials list
         '''
         credentials.credentials_list.remove(self)
-        
+
     @classmethod
     def find_credentials_by_platform_name(cls, username):
         '''
@@ -32,3 +32,13 @@ class credentials:
         for credential in cls.credentials_list:
             if credential.username == username:
                 return credential
+                
+    @classmethod
+    def credential_exists(cls, username):
+        '''
+        method to search through the credentials_list by platform_name and return the credentials
+        '''
+        for credential in cls.credentials_list:
+            if credential.username == username:
+                return True
+        return False
