@@ -80,4 +80,4 @@ class TestUser(unittest.TestCase):
         '''
         method that returns a list of all users saved
         '''
-        self.assertEqual(User.display_users(), User.user_list) #Displays 
+        self.assertEqual(User.display_users(), User.user_list) #Displays all users
