@@ -43,10 +43,13 @@ class User:
             if user.username == username:
                 return True
         return False
-        
+
     @classmethod
     def display_users(cls):
         '''
         method that returns a list of all users saved
         '''
         return cls.user_list
+        
+if __name__ == '__main__':
+    unittest.main()
