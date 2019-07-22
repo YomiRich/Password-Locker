@@ -42,10 +42,13 @@ class credentials:
             if credential.username == username:
                 return True
         return False
-        
+
     @classmethod
     def display_all_credentials(cls):
         '''
         method to display list of saved credentials
         '''
         return cls.credentials_list
+        
+if __name__ == '__main__':
+    unittest.main()
