@@ -49,5 +49,5 @@ To run the tests for the class file:
 ## Technologies Used
 Python3.6
 
-##License
+## License
 MIT ©2019 YomiRich
