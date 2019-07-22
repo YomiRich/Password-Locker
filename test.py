@@ -1,5 +1,7 @@
 import unittest
 from user import User
+from credential import credentials
+import pyperclip
 
 class TestUser(unittest.TestCase):
 
@@ -81,3 +83,13 @@ class TestUser(unittest.TestCase):
         method that returns a list of all users saved
         '''
         self.assertEqual(User.display_users(), User.user_list) #Displays all users
+
+        #credentials test
+
+    def set_Up(self):
+        '''
+        set up method that runs before each Test
+        '''
+        self.new_credentials = credentials(
+            "Pinterest", "Iamrich", "1234")
+            
