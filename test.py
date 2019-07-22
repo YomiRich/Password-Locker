@@ -92,4 +92,14 @@ class TestUser(unittest.TestCase):
         '''
         self.new_credentials = credentials(
             "Pinterest", "Iamrich", "1234")
-            
+
+    def tear_Down(self):
+        '''
+        method that does clean up after each test case has run.
+        '''
+        credentials.credentials_list = []
+
+    def test_init(self):
+        self.assertEqual(self.new_credentials.platform_name, "Pinterest")
+        self.assertEqual(self.new_credentials.user_name, "Iamrich")
+        self.assertEqual(self.new_credentials.password, "1234")
