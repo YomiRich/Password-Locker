@@ -131,3 +131,14 @@ class TestUser(unittest.TestCase):
 
         self.new_credentials.delete_credentials()
         self.assertEqual(len(credentials.credentials_list), 1)
+
+    def test_find_credentials_by_platform_name(self):
+        '''
+        test case to test if we can search for credentials in the credentials_list by the platform_name and display
+        '''
+        test_credentials = credentials("test", "testname", "12345678")
+        test_credentials.save_credentials()
+
+        found_credential = credentials.find_credentials_by_platform_name(
+            "test")
+        self.assertEqual(found_credential.username, test_credentials.user_name)
