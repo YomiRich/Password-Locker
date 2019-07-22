@@ -1,4 +1,4 @@
-## Password_Locker
+## Password-Locker
 
 ## Description
 Password_Locker is a python application that will help users manage their passwords and even generate new passwords for their various accounts.
@@ -18,11 +18,9 @@ As a user I would like:
 
 ## Specifications
 
-|Behaviour | Input | Output|
-|__________|________|______|
-|Display welcome message| In terminal: $./run.py| Welcome to the app|
-|Display prompt for creating an account|Enter: Username & password|Enter your Username and password|
-|Display codes for navigation|Successful login|'Use these short codes: sp - save password, gp - generate password, cp - copy password, dp - display passwords, fp - find passwords, ex - exit '|
+* Display welcome message, In terminal: $./run.py, Welcomes user to the app
+* Display prompt for creating an account, Enter: Username & password
+* Display codes for navigation, once successfully logged in, 'Use these short codes: sp - save password, gp - generate password, cp - copy password, dp - display passwords, fp - find passwords, ex - exit ' for navigation
 
 ## SetUp / Installation Requirements
 
