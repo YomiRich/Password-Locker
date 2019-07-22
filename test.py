@@ -110,7 +110,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_credentials.save_credentials()
         self.assertEqual(len(credentials.credentials_list), 1)
-        
+
     def test_save_multiple_credentials(self):
         '''
         test case to test if we can save multiple credentials into the credentials_list
@@ -120,3 +120,14 @@ class TestUser(unittest.TestCase):
         test_credentials.save_credentials()
 
         self.assertEqual(len(credentials.credentials_list), 2)
+
+    def test_delete_credentials(self):
+        '''
+        test case to test if we can delete credentials from the credentials_list
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = credentials("test", "testname", "12345678")
+        test_credentials.save_credentials()
+
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(credentials.credentials_list), 1)
