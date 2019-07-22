@@ -49,12 +49,6 @@ def display_user():
         return User.display_users()
 
 
-def copy_password(username):
-        '''
-        function to copy password to the clipboard
-        '''
-        my_password = UserData.show_user_data(username)
-        pyperclip.copy(my_password.password)
 
 
 def main():
@@ -94,7 +88,7 @@ def main():
             password = ''
             print('dictate the length of your password')
             r = int(input())
-            for c in range(r):
+            for chars in range(r):
                 password = random.choice(chars)
                 print(password, end="")
                 # create and save new credentials.
@@ -115,7 +109,7 @@ def main():
                     print('\n')
                 else:
                     print('you entered wrong password')
-    else:
+    
                     print('/n')
                     print('you dont seem to have the user saved yet')
                     print('\n')
